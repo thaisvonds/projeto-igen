@@ -1,6 +1,8 @@
 # Ferramentas Internas - Laboratório IGEN 🧪
 
-Este projeto é uma aplicação web desenvolvida para organizar e apresentar visualmente as principais ferramentas utilizadas no Laboratório IGEN, com o objetivo de facilitar a comunicação e o fluxo de trabalho entre setores.
+Este projeto começou como uma landing page de treinamento durante meus estudos em desenvolvimento web. A ideia inicial era criar uma página para uma agência fictícia, mas eu resolvi adaptar e transformar em uma aplicação prática para o Laboratório IGEN, onde trabalho.
+
+O objetivo é organizar e apresentar visualmente as principais ferramentas internas, facilitando a comunicação e o fluxo de trabalho entre os setores.
 
 ## ✨ Funcionalidades
 
