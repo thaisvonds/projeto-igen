@@ -22,3 +22,9 @@ Você pode clonar este repositório e abrir o arquivo `index.html` diretamente n
 ```bash
 git clone https://github.com/thaisvonds/projeto-igen.git
 cd projeto-igen
+
+## 🌐 Veja Online
+
+Quer ver o projeto funcionando? Acesse aqui:
+
+👉 [https://ferramentas-igen.web.app](https://ferramentas-igen.web.app)
