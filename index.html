@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Igen - Inovação e Pesquisa">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Projeto HLA</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="#" class="logo">
+            <img src="src/imagens/logo-igen.png" alt="logo igen" class="imagem">
+            <span class="titulo"> </span>
+        </a>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item">
+                    <a href="#ferramentas">Ferramentas</a>
+                </li>
+
+                <li class="item">
+                    <a href="#quem-somos">Quem somos</a>
+                </li>
+
+                <li class="item">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteudo-principal" id="ferramentas">
+        <section class="paineis">
+
+  <div class="painel mostrar">
+    <div class="painel-imagem">
+      <img src="./src/imagens/gerbase.png" alt="GERBASE">
+    </div>
+    <div class="painel-texto">
+      <h1>G.E.R.Base – IGEN Haplotype Frequency Base</h1>
+      <p>A G.E.R.Base é uma ferramenta robusta para consulta de frequências alélicas e haplotípicas de alelos HLA em alta resolução, e para análise do Desequilíbrio de Ligação (LD).</p>
+      <p>A base utiliza dados de receptores cujos haplótipos HLA foram determinados por segregação familiar, com alelos padronizados pelo método ARD (Domínio de Reconhecimento do Antígeno em 2 campos) para consistência na resolução. A plataforma permite consultas estratificadas por grupos étnicos (branco, preto ou pardo) e fornece métricas detalhadas de LD, como D' e p-valores ajustados (Holm-Bonferroni), entre os loci.</p>
+      <a href="https://gerbase.igen.org.br/calculo/frequencia-hla" class="btn-gerbase" target="_blank">Acessar ferramenta G.E.R.Base</a>
+    </div>
+  </div>
+
+  <!-- Painel 2 - MARCO -->
+  <div class="painel">
+    <div class="painel-imagem">
+      <img src="./src/imagens/marco.png" alt="M.A.R.Co">
+    </div>
+    <div class="painel-texto">
+      <h1>M.A.R.Co – Molecular Antigen Reactivity Correlation</h1>
+      <p>A ferramenta M.A.R.Co foi desenvolvida para analisar correlações de valores de MFI (Mean Fluorescence Intensity) entre antígenos HLA com base em 60.855 resultados de ensaios Luminex Single Antigen (LSA).</p>
+      <p>A plataforma permite a definição de cutoffs personalizados para valores de MFI e identifica possíveis discrepâncias na reatividade entre os alelos escolhidos. Além disso, determina as diferenças em número e também quanto à exposição desses resíduos na superfície das moléculas HLA. Os resultados são exibidos em gráficos interativos, facilitando a interpretação da reatividade sorológica.</p>
+      <a href="https://marco.igen.org.br/" class="btn-marco" target="_blank">Acessar ferramenta M.A.R.Co</a>
+    </div>
+  </div>
+
+  <!-- Painel 3 - SOROTYPE -->
+  <div class="painel">
+    <div class="painel-imagem">
+      <img src="./src/imagens/ferramenta3.png" alt="SOROTYPE">
+    </div>
+    <div class="painel-texto">
+      <h1>SOROTYPE</h1>
+      <p>Ferramenta criada para auxiliar na interpretação de resultados de prova cruzada real e virtual com base no trabalho de Osoegawa et al.; 2024 (doi: 10.1111/tan.15702).</p>
+      <p>Com essa ferramenta, a partir da determinação do alelo mismatch do doador, será apresentado quais “beads” (antígenos HLA) dos fabricantes de Kit de LSA deverão ser levadas em consideração na interpretação dos resultados. Para correta utilização da ferramenta, recomendamos a leitura cuidadosa das instruções de uso, presente na página da ferramenta.</p>
+      <a href="https://sorotipos18ws-v2.igen.org.br/pt-BR" class="btn-sorotype" target="_blank">Acessar ferramenta SOROTYPE</a>
+    </div>
+  </div>
+
+            <a href="#" id="btn-voltar" class="seta btn-voltar">voltar</a>
+            <a href="#" id="btn-avancar" class="seta btn-avancar">avancar</a>
+
+        </section>
+
+        <section class="quem-somos" id="quem-somos">
+            <div class="conteudo">
+                <div class="informacoes">
+                    <h2 class="titulo">Quem somos</h2>
+
+                    <p class="texto">
+                        O IGEN (Instituto de Genética e Pesquisa em Transplantes) é uma instituição dedicada à inovação,
+                        desenvolvimento científico e tecnológico na área de imunogenética e transplantes. Atua
+                        oferecendo serviços especializados, educação, pesquisa e soluções que contribuem para o avanço
+                        da medicina de transplantes, com foco na excelência, ética e qualidade.
+                        O IGEN também desenvolve ferramentas avançadas para suporte à pesquisa e prática clínica em
+                        imunogenética. Entre elas, destacam-se a G.E.R.Base, uma base de dados para consulta de
+                        frequências alélicas e haplotípicas de alelos HLA com análise detalhada do Desequilíbrio de
+                        Ligação; a M.A.R.Co, que analisa correlações de reatividade sorológica entre antígenos HLA a
+                        partir de resultados de ensaios Luminex; e a ferramenta de determinação de equivalentes
+                        sorológicos para a interpretação de provas cruzadas, facilitando a avaliação de compatibilidade
+                        entre doador e receptor.
+                    </p>
+
+                </div>
+
+    <div class="imagem">
+      <img src="./src/imagens/quemsomos.png" alt="foto-quem-somos">
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+    <footer class="rodape" id="contato">
+
+        <nav class="navegacao">
+            <a href="#" class="logo">
+                <img src="./src/imagens/logo-transp.png" alt="logo-igen" class="imagem">
+                <span class="titulo"></span>
+            </a>
+            <div class="contatos-rodape">
+                <a href="#" class="contato-rodape">
+                    <i class="fa-solid fa-at"></i>
+                </a>
+
+                <a href="#" class="contato-rodape">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+
+                <a href="#" class="contato-rodape">
+                    <i class="fa-solid fa-location-dot"></i>
+                </a>
+            </div>
+        </nav>
+        <p class="copyright">2021 IGEN Todos os direitos reservados.</p>
+
+    </footer>
+    <script src="src/js/painel.js"></script>
+
+
+
+
+</body>
+
+</html>

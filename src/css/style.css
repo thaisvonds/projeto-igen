@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Public Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+    display: block; /* evita espaços em branco em imagens inline */
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 16px;
+}
+
+/* ---------- Cabeçalho --------- */
+
+.cabecalho {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, menu à direita */
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #b8d3e9;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.cabecalho .logo .imagem {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Menu horizontal */
+.cabecalho .menu {
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item {
+    margin: 10px; 
+}
+
+.cabecalho .navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.cabecalho .navegacao .menu .item a:hover {
+    background-color: #5480a1;
+    color: white;
+}
+
+/* Responsivo para cabeçalho */
+@media (max-width: 768px) {
+    .cabecalho {
+        justify-content: center;
+    }
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+}
+
+/* PAINEIS */
+
+.imagem-painel {
+  display: none;
+}
+
+.imagem-painel.mostrar {
+  display: block;
+  position: relative; /* para posicionar o texto dentro */
+}
+
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+    text-align: center;
+}
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0;
+    transition: 0.3s ease-in-out; 
+
+}
+
+.conteudo-principal .paineis .ferramenta1 {
+    background-image: url('../imagens/gerbase.png');
+    position: relative;
+
+}
+
+
+.conteudo-principal .paineis .ferramenta2 {
+    background-image: url('../imagens/marco.png');
+
+}
+
+.conteudo-principal .paineis .ferramenta3 {
+    background-image: url('../imagens/ferramenta3.png');
+
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    opacity: 1;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    max-width: 1500px;
+    background-color: rgba(84, 128, 161, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+    text-align: left;
+    z-index: 10; 
+    pointer-events: auto; 
+}
+
+.btn-gerbase {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #5480A1;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-gerbase:hover {
+  background-color: #f83535; 
+  color: #fff;
+  cursor: pointer;
+}
+.btn-marco {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #5480A1;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;  
+}
+
+.btn-marco:hover {
+  background-color: #f83535; 
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-sorotype {
+      display: inline-block;
+  padding: 10px 18px;
+  background-color: #5480A1;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-sorotype:hover {
+background-color: #f83535; 
+  color: #fff;
+  cursor: pointer;
+}
+
+.conteudo-principal .paineis .seta {
+    background-image: url('../imagens/seta-direita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg);
+
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+
+    right: 20px;
+    
+}
+
+.seta {
+    z-index: 20;
+}
+
+/* QUEM SOMOS */
+
+.quem-somos .conteudo {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #D0EBFB;
+}
+
+.quem-somos .conteudo .informacoes {
+    width: 48%;
+
+}
+
+.quem-somos .conteudo .imagem {
+    width: 45%;
+    margin-left: 10%;
+}
+
+.quem-somos .conteudo .informacoes .titulo {
+    font-size: 25px;
+    color: #5480a1;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+.quem-somos .conteudo .informacoes .texto {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+/* RODAPE */
+
+.rodape {
+    padding: 40px 0 20px 0;
+    background-color: #5988a7;
+}
+
+.rodape .navegacao {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .navegacao .logo .imagem {
+    width: 220px;
+}
+
+.rodape .contatos-rodape {
+    display: flex;
+}
+
+.rodape .contatos-rodape a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 25px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+}
+
+.rodape .contatos-rodape a:hover {
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .copyright{
+    margin: 30px 0 0 0;
+    text-align: center;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* PAINÉIS GERAIS */
+.paineis {
+  position: relative;
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 100px
+}
+
+.painel {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  width: 100%;
+  max-width: 1600px;
+  gap: 20px;
+}
+
+.painel.mostrar {
+  display: flex;
+}
+
+.painel-imagem {
+  flex: 0 0 400px; 
+}
+
+
+.painel-imagem img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.painel-texto {
+  flex: 1;
+  background-color: #e4edf5;
+  padding: 30px;
+  border-radius: 12px;
+  color: #000;
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.painel-texto h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.painel-texto p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.painel-texto a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: #5480A1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.painel-texto a:hover {
+  background-color: #f83535;
+}
+
+/* SETAS */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-image: url('../imagens/seta-direita.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.seta.btn-voltar {
+  left: 20px;
+  transform: translateY(-50%) rotateY(180deg);
+}
+
+.seta.btn-avancar {
+  right: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .painel {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center; 
+    
+  }
+    .conteudo-principal .paineis .seta {
+    top: 65%;
+    width: 25px !important;
+    height: 25px !important;
+    background-size: 100% 100%;
+    }
+
+  
+  /* Conteúdo principal paineis deve ficar em linha (carrossel lateral), não coluna */
+  .conteudo-principal .paineis {
+    height: auto;
+    flex-direction: row;   
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-x: hidden;  
+    min-height: 400px;   
+  }
+
+  .quem-somos .conteudo {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .quem-somos .conteudo .informacoes,
+  .quem-somos .conteudo .imagem {
+    width: 100%;
+    margin: 0;
+  }
+
+  .quem-somos .conteudo .imagem {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .quem-somos .conteudo .informacoes .titulo {
+    font-size: 24px; 
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .quem-somos .conteudo .informacoes .texto {
+    font-size: 14px; 
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  /* imagens e texto do painel */
+  .painel-imagem, .painel-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Imagem com espaçamento maior do topo */
+  .painel-imagem img {
+    max-width: 70%;
+    margin: 30px auto 20px auto; 
+    display: block;
+  }
+
+  .painel-texto {
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .painel-texto h1 {
+    font-size: 20px;
+  }
+
+  .painel-texto p {
+    font-size: 14px;
+  }
+
+  /* Setas no rodapé, mas posicionadas com mais precisão */
+.seta {
+  top: 65%; 
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+}
+
+
+  .seta.btn-voltar {
+    left: 20px;
+  }
+
+  .seta.btn-avancar {
+    right: 20px;
+  }
+
+  .rodape .contatos-rodape a {
+  font-size: 16px;
+  padding: 8px;
+  width: 36px;
+}
+
+.rodape .navegacao .logo .imagem {
+  width: 150px;
+}
+
+.rodape .copyright {
+    font-size: 12px;
+}
+
+}
